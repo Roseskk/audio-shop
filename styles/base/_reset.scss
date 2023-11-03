@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+body {
+  position: relative;
+
+  margin: 0 auto;
+  overflow-x: hidden ;
+  background: $pageColor;
+  font-family: $fontPrimary !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+input, textarea {
+  font-family: "Manrope";
+}
