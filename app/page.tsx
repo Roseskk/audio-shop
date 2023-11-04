@@ -16,7 +16,7 @@ export default async function Home() {
   const data = await getData()
   return (
     <main>
-      {JSON.stringify(data[0])}
+      {/*{JSON.stringify(data[0])}*/}
     </main>
   )
 }

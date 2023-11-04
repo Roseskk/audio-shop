@@ -1,0 +1,31 @@
+@import "../../styles/abstracts/variables";
+.navigation {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navigation_list {
+
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    .navigation_item {
+
+      .navigation_link {
+
+        color: $pageColor;
+        font-weight: 700;
+        font-size: $textH6;
+        letter-spacing: $h4Letter;
+
+        .navigation_link__title {
+          //placeholder
+          color: $firstColor;
+        }
+
+      }
+    }
+  }
+}

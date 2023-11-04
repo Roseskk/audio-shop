@@ -27,12 +27,16 @@ button {
 }
 
 body {
-  position: relative;
 
   margin: 0 auto;
+
   overflow-x: hidden ;
   background: $pageColor;
   font-family: $fontPrimary !important;
+
+  //background-color: red;
+
+  max-width: 1920px;
 }
 
 ::-webkit-scrollbar {
