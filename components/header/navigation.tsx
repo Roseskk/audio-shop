@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect} from 'react';
+import React from 'react';
 import {IHeader} from "@/types/types";
 import Image from 'next/image';
 

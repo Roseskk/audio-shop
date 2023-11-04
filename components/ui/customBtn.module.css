@@ -1,0 +1,36 @@
+.custom_btn {
+  display: block;
+  padding: 15px 30px;
+  width: fit-content;
+}
+
+.transparent {
+  border: 1px solid black;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: transparent;
+}
+
+.default {
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: #D87D4A;
+  color: white;
+}
+
+.glass {
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: transparent;
+  color: white;
+}
+.glass .arrow {
+  margin-left: 10px;
+  color: #D87D4A;
+}
+
+/*# sourceMappingURL=customBtn.module.css.map */
