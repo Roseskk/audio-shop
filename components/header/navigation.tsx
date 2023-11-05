@@ -37,7 +37,7 @@ const Navigation = () => {
                     ))
                 }
             </ul>
-            <Link href={'/basket'}>
+            <Link href={'/special/basket'}>
                 <Image src={basket} alt={'basket'} />
             </Link>
         </nav>
