@@ -1,0 +1,10 @@
+@import "../../styles/abstracts/variables";
+
+.product_cards__list {
+  margin-top: 120px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0 30px;
+}

@@ -1,0 +1,27 @@
+.category_card__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  height: 164px;
+  background-color: #F1F1F1;
+  border-radius: 8px;
+}
+.category_card__item .img {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.category_card__item .name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.29px;
+  margin-top: 36px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=categoryCard.module.css.map */
