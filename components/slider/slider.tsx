@@ -20,9 +20,8 @@ const Slider: React.FC<Props> = ({ products }) => {
     return (
         <section className={styles.section_slider}>
             <Divider />
-            {/* Инициализация Swiper */}
             <Swiper
-                modules={[Navigation, Pagination, Autoplay]} // Добавь модули, которые ты хочешь использовать
+                modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1}
                 navigation={false}
                 autoplay={{
@@ -39,7 +38,7 @@ const Slider: React.FC<Props> = ({ products }) => {
                     <SwiperSlide className={styles.swiper_slide} key={product.id}>
                         <div className={styles.slide_content}>
                             {
-                                product.acf.isnew && <span className={styles.new_product}>NEW PRODUCT</span>
+                                product.acf.isnew === 'true' && <span className={styles.new_product}>NEW PRODUCT</span>
                             }
                             <h1 className={styles.title}>{product.title.rendered}</h1>
                             <p className={styles.subtitle}>{product.acf.subtitle}</p>

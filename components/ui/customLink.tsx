@@ -24,9 +24,15 @@ const CustomLink: React.FC<Props> = ({link, type, text}) => {
                 type === 'default' && <Link className={styles.custom_btn + ' ' + styles.default} href={link}>{text}</Link>
             }
             {
-                type === 'glass' && <Link className={styles.custom_btn + ' ' + styles.glass} href={link}>{text}</Link>
+                type === 'glass' && <Link className={styles.custom_btn + ' ' + styles.glass} href={link}>
+                <span>
+                    {text}
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                    <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+                </svg>
+                </Link>
             }
-
         </>
 )}
 
