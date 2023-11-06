@@ -1,0 +1,39 @@
+@import "../../styles/abstracts/variables";
+
+.section_audio {
+  margin-top: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .audio_content {
+    max-width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .title {
+      font-weight: 700;
+      font-size: $textH2;
+      letter-spacing: $h2Letter;
+      line-height: $h2Line;
+
+      text-transform: uppercase;
+
+      .sub {
+        color: $firstColor;
+      }
+
+    }
+
+    .content {
+      font-weight: 500;
+      font-size: $textBody;
+      line-height: $bodyLine;
+
+      opacity: 0.5;
+    }
+  }
+}
