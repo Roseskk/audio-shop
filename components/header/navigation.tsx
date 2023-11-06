@@ -19,7 +19,7 @@ const navLinks: header[] = [
     {id: 4, title: 'EARPHONES', href: '/products/earphones'},
 ]
 
-const Navigation = () => {
+const Navigation = (props: { type?: string }) => {
     const pathname = usePathname()
     return (
         <nav className={styles.navigation}>
@@ -38,9 +38,11 @@ const Navigation = () => {
                     ))
                 }
             </ul>
-            <Link href={'/special/basket'}>
-                <Image src={basket} alt={'basket'}/>
-            </Link>
+            {
+                !props.type && <Link href={'/special/basket'}>
+                    <Image src={basket} alt={'basket'}/>
+                </Link>
+            }
         </nav>
 
     )
