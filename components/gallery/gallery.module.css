@@ -85,6 +85,7 @@
   background-size: cover;
   object-fit: cover;
   height: 320px;
+  border-radius: 8px;
 }
 .section_gallery .third_block .right {
   display: flex;
