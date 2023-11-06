@@ -14,31 +14,32 @@ type header = Partial<IHeader>
 
 const navLinks: header[] = [
     {id: 1, title: 'HOME', href: '/'},
-    {id: 2, title: 'HEADPHONES', href: '/headphones'},
-    {id: 3, title: 'SPEAKERS', href: '/speakers'},
-    {id: 4, title: 'EARPHONES', href: '/earphones'},
+    {id: 2, title: 'HEADPHONES', href: '/products/headphones'},
+    {id: 3, title: 'SPEAKERS', href: '/products/speakers'},
+    {id: 4, title: 'EARPHONES', href: '/products/earphones'},
 ]
 
 const Navigation = () => {
     const pathname = usePathname()
-    return(
+    return (
         <nav className={styles.navigation}>
             <Link href={'/'}>
-                <Image src={logo} alt={'logo'} />
+                <Image src={logo} alt={'logo'}/>
             </Link>
             <ul className={styles.navigation_list}>
                 {
-                    navLinks.map((link) =>(
+                    navLinks.map((link) => (
                         <li key={link.id} className={styles.navigation_item}>
-                            <Link className={ styles.navigation_link} href={link.href!}>
-                                <span className={ pathname === link.href ? styles.navigation_link__title : ''}>{link.title!}</span>
+                            <Link className={styles.navigation_link} href={link.href!}>
+                                <span
+                                    className={pathname === link.href ? styles.navigation_link__title : ''}>{link.title!}</span>
                             </Link>
                         </li>
                     ))
                 }
             </ul>
             <Link href={'/special/basket'}>
-                <Image src={basket} alt={'basket'} />
+                <Image src={basket} alt={'basket'}/>
             </Link>
         </nav>
 

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.section_gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 168px;
+}
+.section_gallery .first_block__wrapper {
+  background-color: #D87D4A;
+  border-radius: 8px;
+}
+.section_gallery .first_block__wrapper .first_block {
+  padding: 0 95px 0 117px;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  background-color: #D87D4A;
+  border-radius: 200px;
+  height: 560px;
+  overflow: hidden;
+  background-image: url("../../assets/images/gallery/pattern-circles.svg");
+  /* Путь к вашему изображению */
+  background-position: -60% 20%;
+  /* Расположение слева и по центру по вертикали */
+  background-repeat: no-repeat;
+}
+.section_gallery .first_block__wrapper .first_block img {
+  transform: translateY(20px);
+}
+.section_gallery .first_block__wrapper .first_block .first_block__content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 349px;
+}
+.section_gallery .first_block__wrapper .first_block .first_block__content .title {
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  color: white;
+  z-index: 100;
+}
+.section_gallery .first_block__wrapper .first_block .first_block__content .content {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 15px;
+  z-index: 100;
+  color: white;
+  opacity: 0.55;
+}
+.section_gallery .first_block__wrapper .first_block .first_block__content a {
+  z-index: 100;
+}
+.section_gallery .second_block {
+  padding: 0 0 0 95px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 352px;
+  background-image: url("../../assets/images/gallery/image-speaker-zx7.jpg");
+  /* Путь к вашему изображению */
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.section_gallery .second_block .second_block__content {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.section_gallery .third_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+.section_gallery .third_block .left {
+  background-image: url("../../assets/images/gallery/image-earphones-yx1.jpg");
+  /* Путь к вашему изображению */
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 320px;
+}
+.section_gallery .third_block .right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 101px 0 101px 95px;
+  border-radius: 8px;
+  background-color: #F1F1F1;
+}
+
+.block_content {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+/*# sourceMappingURL=gallery.module.css.map */
