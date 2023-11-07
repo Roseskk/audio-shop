@@ -3,8 +3,8 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: 'audiophile-wp.local',
+                protocol: 'https',
+                hostname: 'cr74317-wordpress-9m57d.tw1.ru',
                 port: '',
             },
         ],

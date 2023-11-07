@@ -16,21 +16,21 @@ const Gallery = () => {
                         <h2 className={styles.title}>ZX9 SPEAKER</h2>
                         <p className={styles.content}>Upgrade to premium speakers that are phenomenally built to deliver
                             truly remarkable sound.</p>
-                        <CustomLink link={'products/speakers/zx9'} type={"transparent"} text={'SEE PRODUCT'}/>
+                        <CustomLink link={'products/speakers/96'} type={"transparent"} text={'SEE PRODUCT'}/>
                     </div>
                 </div>
             </div>
             <div className={styles.second_block}>
                 <div className={styles.second_block__content}>
                     <h3 className={styles.block_content}>ZX 7 SPEAKER</h3>
-                    <CustomLink link={'products/speakers/zx7'} type={"transparent"} text={'SEE PRODUCT'}/>
+                    <CustomLink link={'products/speakers/75'} type={"transparent"} text={'SEE PRODUCT'}/>
                 </div>
             </div>
             <div className={styles.third_block}>
                 <div className={styles.left}/>
                 <div className={styles.right}>
                     <h3 className={styles.block_content}>YX1 EARPHONES</h3>
-                    <CustomLink link={'products/earphones/yx1'} type={"transparent"} text={'SEE PRODUCT'}/>
+                    <CustomLink link={'products/earphones/83'} type={"transparent"} text={'SEE PRODUCT'}/>
                 </div>
             </div>
         </section>

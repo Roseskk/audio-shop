@@ -20,13 +20,11 @@ export async function getProducts() {
 
 export default async function Home() {
     const products = await getProducts()
-    const categories = ['headphones', 'speakers', 'earphones'];
-    const productsCardsData = categories.map(category => products.find((item: any) => item.acf.category.slug === category));
 
     return (
         <main>
             <Slider products={products}/>
-            <ProductCards productsInfo={productsCardsData}/>
+            <ProductCards/>
             <Gallery/>
             <AboutAudio/>
         </main>

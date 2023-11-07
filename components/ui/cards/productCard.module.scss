@@ -1,0 +1,59 @@
+@import "../../../styles/abstracts/variables";
+
+.conditional_card__render {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.product_card__item {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.content {
+  width: 460px;
+
+  display: flex;
+  flex-direction: column;
+
+  .new {
+    font-weight: 400;
+
+    font-size: $overline;
+    letter-spacing: $overlineLetter;
+    line-height: $overLineInterval;
+
+    color: $firstColor;
+  }
+
+  .title {
+    font-weight: 700;
+
+    font-size: $textH2;
+    letter-spacing: $h2Letter;
+    line-height: $h2Line;
+
+    color: black;
+
+    margin-top: 16px;
+
+    text-transform: uppercase;
+  }
+
+  .content_text {
+    font-weight: 500;
+    font-size: $textBody;
+    line-height: $bodyLine;
+
+    color: black;
+    opacity: 0.5;
+
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+}

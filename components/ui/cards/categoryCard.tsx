@@ -13,10 +13,10 @@ const CategoryCard: React.FC<Props> = ({cardInfo}) => {
     return (
         <li className={styles.category_card__item}>
             <Image className={styles.img} width={150} height={150} src={cardInfo.acf.thumbnail}
-                   alt={cardInfo.title.rendered}/>
+                   alt={cardInfo.title}/>
             <div className={styles.shadow}/>
             <h6 className={styles.name}>{cardInfo.acf.category.name}</h6>
-            <CustomLink link={`${cardInfo.acf.category.slug}`} type={"glass"} text={'SHOP'}/>
+            <CustomLink link={`/products/${cardInfo.acf.category.slug}`} type={"glass"} text={'SHOP'}/>
         </li>
     )
 }

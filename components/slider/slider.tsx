@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import Divider from "@/components/ui/divider";
-import { Products } from "@/types/types";
+import {Products} from "@/types/types";
 import styles from './slider.module.scss';
 
 import 'swiper/css';
@@ -16,10 +16,11 @@ interface Props {
     products: Products;
 }
 
-const Slider: React.FC<Props> = ({ products }) => {
+const Slider: React.FC<Props> = ({products}) => {
+    console.log(products)
     return (
         <section className={styles.section_slider}>
-            <Divider />
+            <Divider/>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1}
@@ -42,9 +43,10 @@ const Slider: React.FC<Props> = ({ products }) => {
                             }
                             <h1 className={styles.title}>{product.title.rendered}</h1>
                             <p className={styles.subtitle}>{product.acf.subtitle}</p>
-                            <CustomLink link={`${product.acf.category.slug}/${product.slug}`} type={'default'} text={'SEE PRODUCTS'} />
+                            <CustomLink link={`/products/${product.acf.category.slug}/${product.id}`} type={'default'}
+                                        text={'SEE PRODUCTS'}/>
                         </div>
-                        <Image src={product.acf.heroimage} width={710} height={729} alt={product.title.rendered} />
+                        <Image src={product.acf.heroimage} width={710} height={729} alt={product.title.rendered}/>
                     </SwiperSlide>
                 ))}
             </Swiper>

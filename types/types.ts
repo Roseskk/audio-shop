@@ -14,7 +14,7 @@ export type Products = Product[]
 export interface Product {
     id: number
     slug: string
-    title: Title
+    title: string
     acf: Acf
 }
 
