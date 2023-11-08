@@ -1,0 +1,30 @@
+@import "../../../styles/abstracts/variables";
+
+.count_wrapper {
+  background-color: #F1F1F1;
+
+  padding: 15px;
+
+  display: flex;
+  gap: 20px;
+
+  .minus {
+    color: black;
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .plus {
+    color: black;
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .count {
+    color: black;
+    font-weight: 700;
+    font-size: 13px;
+  }
+}

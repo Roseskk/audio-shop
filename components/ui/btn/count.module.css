@@ -1,0 +1,25 @@
+.count_wrapper {
+  background-color: #F1F1F1;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+.count_wrapper .minus {
+  color: black;
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: 13px;
+}
+.count_wrapper .plus {
+  color: black;
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: 13px;
+}
+.count_wrapper .count {
+  color: black;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=count.module.css.map */

@@ -1,0 +1,49 @@
+.card_info__item {
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_info__item .outlined {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  color: #D87D4A;
+}
+.card_info__item .title {
+  margin-top: 16px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 44px;
+  color: black;
+}
+.card_info__item .content {
+  margin-top: 32px;
+  font-size: 15px;
+  line-height: 25px;
+  color: black;
+  opacity: 0.5;
+}
+.card_info__item .price {
+  margin-top: 32px;
+  font-size: 18px;
+  letter-spacing: 1.29px;
+  font-weight: 700;
+  color: black;
+}
+.card_info__item .btn_wrapper {
+  margin-top: 47px;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  gap: 16px;
+}
+
+.content_wrapper {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=productCardInfo.module.css.map */

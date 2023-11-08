@@ -7,7 +7,7 @@ import styles from './productCards.module.scss';
 const ProductCardsSlug = (props: { products: Products }) => {
     return (
         <ul className={styles.product_cards__slug__list}>
-            {props.products.map((product, idx) => <ProductCard product={product} index={idx}/>)}
+            {props.products.map((product, idx) => <ProductCard key={product.id} product={product} index={idx}/>)}
         </ul>
     )
 }

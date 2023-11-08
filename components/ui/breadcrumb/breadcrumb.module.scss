@@ -1,0 +1,15 @@
+@import "../../../styles/abstracts/variables";
+
+.breadcrumb {
+  display: block;
+  margin-top: 80px;
+
+  font-size: $textBody;
+  font-weight: 500;
+  line-height: 25px;
+
+  opacity: 0.5;
+
+  color: black;
+  text-decoration: none;
+}
