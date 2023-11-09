@@ -9,6 +9,7 @@ const CountBtn = (props: { name: string, price: string }) => {
     const dispatch = useAppDispatch()
     const counter = useAppSelector(state => state.basketReducer.products)
     const [count, setCount] = useState<number>(counter[props.name]?.count ?? 0)
+
     const handleChange = (type: string) => {
         if (type === 'plus') {
             setCount(prev => prev + 1)
@@ -21,7 +22,7 @@ const CountBtn = (props: { name: string, price: string }) => {
             dispatch(setProducts({name: props.name, count: count - 1, price: props.price}))
         }
     }
-    console.log(counter)
+
     return (
         <div className={styles.count_wrapper}>
             <button className={styles.minus} onClick={() => handleChange('minus')}>-</button>

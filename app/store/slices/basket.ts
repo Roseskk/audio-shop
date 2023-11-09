@@ -14,7 +14,10 @@ export interface IBasket {
 }
 
 const initialState: IBasket = {
-    products: localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')!) : {}
+    // NO SSR
+    // products: localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')!) : {}
+    // WITH SSR
+    products: {}
 }
 
 export const basketSlice = createSlice({

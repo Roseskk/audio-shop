@@ -13,7 +13,6 @@ export async function getRecommendationData() {
 
 const Recommendations = async () => {
     const recommended: Products = await getRecommendationData()
-    console.log(recommended)
     return (
         <section className={styles.section_rec}>
             <h2 className={styles.section_rec_title}>YOU MAY ALSO LIKE</h2>
