@@ -1,0 +1,43 @@
+.section_rec {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.section_rec .section_rec_title {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  color: black;
+  text-align: center;
+}
+.section_rec .rec_list {
+  display: flex;
+  gap: 120px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.section_rec .rec_list .rec_item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section_rec .rec_list .rec_item .img__wrapper {
+  background-color: #F1F1F1;
+  padding: 62px 100px 62px 100px;
+  display: grid;
+  place-items: center;
+}
+.section_rec .rec_list .rec_item .item_title {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1.7px;
+  color: black;
+  text-align: center;
+}
+.section_rec .rec_list .rec_item .btn_wrapper {
+  display: flex;
+  align-self: center;
+}
+
+/*# sourceMappingURL=recommendation.module.css.map */

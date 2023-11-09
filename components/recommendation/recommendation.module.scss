@@ -1,0 +1,57 @@
+@import "../../styles/abstracts/variables";
+
+.section_rec {
+  margin-top: 160px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  .section_rec_title {
+    font-weight: 700;
+    font-size: $textH2;
+    letter-spacing: $h2Letter;
+
+    color: black;
+
+    text-align: center;
+  }
+
+  .rec_list {
+    display: flex;
+    gap: 120px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    //grid-template-columns: 1fr 1fr 1fr;
+    //grid-template-rows: auto;
+    //
+    //gap: 0 30px;
+
+    .rec_item {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .img__wrapper {
+        background-color: #F1F1F1;
+        padding: 62px 100px 62px 100px;
+        display: grid;
+        place-items: center;
+      }
+
+      .item_title {
+        font-weight: 700;
+        font-size: $textH5;
+        letter-spacing: $h5Letter;
+        color: black;
+
+        text-align: center;
+      }
+
+      .btn_wrapper {
+        display: flex;
+        align-self: center;
+      }
+    }
+  }
+}

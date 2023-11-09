@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["recommendation.module.scss","../../styles/abstracts/_variables.scss"],"names":[],"mappings":"AAEA;EACE;EAEA;EACA;EACA;;AAEA;EACE;EACA,WCOK;EDNL,gBC8BO;ED5BP;EAEA;;AAGF;EACE;EACA;EACA;EACA;;AAMA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA,WCtBC;EDuBD,gBCCG;EDAH;EAEA;;AAGF;EACE;EACA","file":"recommendation.module.css"}

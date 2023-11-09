@@ -5,21 +5,23 @@ import {useAppDispatch, useAppSelector} from "@/app/store";
 import {setProducts} from "@/app/store/slices/basket";
 import withReduxProvider from "@/app/store/ReduxProvider";
 
-const CountBtn = (props: { name: string }) => {
+const CountBtn = (props: { name: string, price: string }) => {
     const dispatch = useAppDispatch()
-    const selector = useAppSelector(state => state.basketReducer.products)
-    const [count, setCount] = useState<number>(0)
+    const counter = useAppSelector(state => state.basketReducer.products)
+    const [count, setCount] = useState<number>(counter[props.name]?.count ?? 0)
     const handleChange = (type: string) => {
         if (type === 'plus') {
-            console.log(type)
             setCount(prev => prev + 1)
-            dispatch(setProducts({name: props.name, count: count + 1}))
+            dispatch(setProducts({name: props.name, count: count + 1, price: props.price}))
         } else {
+            if (count === 0) {
+                return
+            }
             setCount(prev => prev - 1)
-            dispatch(setProducts({name: props.name, count: count - 1}))
+            dispatch(setProducts({name: props.name, count: count - 1, price: props.price}))
         }
     }
-    console.log(selector)
+    console.log(counter)
     return (
         <div className={styles.count_wrapper}>
             <button className={styles.minus} onClick={() => handleChange('minus')}>-</button>
