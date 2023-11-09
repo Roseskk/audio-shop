@@ -18,7 +18,7 @@ const ProductCardInfo = (props: { data: Product }) => {
                 <p className={styles.content}>{props.data.acf.subtitle}</p>
                 <span className={styles.price}>$ {props.data.acf.price}</span>
                 <div className={styles.btn_wrapper}>
-                    <CountBtn/>
+                    <CountBtn name={props.data.title}/>
                     <CustomLink link={'#'} type={"default"} text={'ADD TO CARD'}/>
                 </div>
             </div>
