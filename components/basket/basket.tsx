@@ -36,16 +36,22 @@ const Basket = () => {
                 dispatch(setProducts({name: k, price: v.price, count: v.count, thumbnail: v.thumbnail}))
             }
 
-            const total = Object.entries(products).map(([k, v]) => v.price.replace(/,/g, "") * v.count).reduce((acc, cur) => (Number.parseInt(acc) + Number.parseInt(cur)).toString())
-            setTotal(total)
+            const total = Object.entries(products).map(([k, v]) => {
+                const priceNumber = parseFloat(v.price.replace(/,/g, ""));
+                return priceNumber * v.count;
+            }).reduce((acc, cur) => acc + cur, 0);
+            setTotal(total);
 
         }
     }, [])
 
     useEffect(() => {
         if (total) {
-            const total = Object.entries(products).map(([k, v]) => v.price.replace(/,/g, "") * v.count).reduce((acc, cur) => (Number.parseInt(acc) + Number.parseInt(cur)).toString())
-            setTotal(total)
+            const total = Object.entries(products).map(([k, v]) => {
+                const priceNumber = parseFloat(v.price.replace(/,/g, ""));
+                return priceNumber * v.count;
+            }).reduce((acc, cur) => acc + cur, 0);
+            setTotal(total);
         }
     }, [products])
 
