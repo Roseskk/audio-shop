@@ -9,6 +9,7 @@ import Link from "next/link";
 
 import styles from './navigation.module.scss';
 import {usePathname} from "next/navigation";
+import Basket from "@/components/basket/basket";
 
 type header = Partial<IHeader>
 
@@ -39,9 +40,7 @@ const Navigation = (props: { type?: string }) => {
                 }
             </ul>
             {
-                !props.type && <Link href={'/special/basket'}>
-                    <Image src={basket} alt={'basket'}/>
-                </Link>
+                !props.type && <Basket/>
             }
         </nav>
 

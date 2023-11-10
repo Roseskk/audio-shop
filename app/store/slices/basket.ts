@@ -3,6 +3,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 interface IProduct {
     price: string;
     count: number;
+    thumbnail: string;
 }
 
 export interface IProductsBasket {
@@ -24,16 +25,22 @@ export const basketSlice = createSlice({
     name: 'basket',
     initialState,
     reducers: {
-        setProducts: (state, action: PayloadAction<{ name: string, price: string, count: number }>) => {
-            const {name, price, count} = action.payload;
+        setProducts: (state, action: PayloadAction<{
+            name: string,
+            price: string,
+            count: number,
+            thumbnail: string
+        }>) => {
+            const {name, price, count, thumbnail} = action.payload;
             if (!state.products[name]) {
-                state.products[name] = {price, count};
+                state.products[name] = {price, count, thumbnail};
                 localStorage.setItem(`products`, `${JSON.stringify(state.products)}`)
 
             } else {
                 state.products[action.payload.name] = {
                     price: action.payload.price,
-                    count: action.payload.count
+                    count: action.payload.count,
+                    thumbnail: action.payload.thumbnail
                 }
                 localStorage.setItem(`products`, `${JSON.stringify(state.products)}`)
             }

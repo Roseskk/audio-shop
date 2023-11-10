@@ -6,7 +6,7 @@ import {setProducts} from "@/app/store/slices/basket";
 import withReduxProvider from "@/app/store/ReduxProvider";
 import {ILocalStorageProducts} from "@/types/types";
 
-const CountBtn = (props: { name: string, price: string }) => {
+const CountBtn = (props: { thumbnail: string, name: string, price: string }) => {
     const dispatch = useAppDispatch()
     const counter = useAppSelector(state => state.basketReducer.products)
     const [count, setCount] = useState<number>(counter[props.name]?.count ?? 0)
@@ -18,7 +18,7 @@ const CountBtn = (props: { name: string, price: string }) => {
             const products: ILocalStorageProducts = JSON.parse(savedProducts)
 
             for (const [k, v] of Object.entries(products)) {
-                dispatch(setProducts({name: k, price: v.price, count: v.count}))
+                dispatch(setProducts({name: k, price: v.price, count: v.count, thumbnail: v.thumbnail}))
             }
         }
     }, [])
@@ -32,13 +32,13 @@ const CountBtn = (props: { name: string, price: string }) => {
     const handleChange = (type: string) => {
         if (type === 'plus') {
             setCount(prev => prev + 1)
-            dispatch(setProducts({name: props.name, count: count + 1, price: props.price}))
+            dispatch(setProducts({name: props.name, count: count + 1, thumbnail: props.thumbnail, price: props.price}))
         } else {
             if (count === 0) {
                 return
             }
             setCount(prev => prev - 1)
-            dispatch(setProducts({name: props.name, count: count - 1, price: props.price}))
+            dispatch(setProducts({name: props.name, count: count - 1, thumbnail: props.thumbnail, price: props.price}))
         }
     }
 

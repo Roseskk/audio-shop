@@ -75,4 +75,5 @@ export interface ILocalStorageProducts {
 export interface ILocalStorageProduct {
     price: string;
     count: number;
+    thumbnail: string;
 }
