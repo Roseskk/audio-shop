@@ -29,6 +29,7 @@ export const basketSlice = createSlice({
             if (!state.products[name]) {
                 state.products[name] = {price, count};
                 localStorage.setItem(`products`, `${JSON.stringify(state.products)}`)
+
             } else {
                 state.products[action.payload.name] = {
                     price: action.payload.price,

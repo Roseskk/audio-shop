@@ -65,3 +65,14 @@ export interface FeaturesCategory {
     count: number
     filter: string
 }
+
+//LOCALSTORAGE
+
+export interface ILocalStorageProducts {
+    [key: string]: ILocalStorageProduct
+}
+
+export interface ILocalStorageProduct {
+    price: string;
+    count: number;
+}
