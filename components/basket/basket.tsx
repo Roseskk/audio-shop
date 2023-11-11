@@ -40,10 +40,11 @@ const Basket = () => {
                 const priceNumber = parseFloat(v.price.replace(/,/g, ""));
                 return priceNumber * v.count;
             }).reduce((acc, cur) => acc + cur, 0);
+            console.log(total)
             setTotal(total);
 
         }
-    }, [])
+    }, [open])
 
     useEffect(() => {
         if (total) {
@@ -58,14 +59,16 @@ const Basket = () => {
     const length = Object.entries(products).length
     return (
         <>
-            <Image className={styles.basket_img} onClick={() => setOpen(true)} src={basket} alt={'basket'}/>
+            <Image className={styles.basket_img} onClick={() => setOpen(prev => !prev)} src={basket} alt={'basket'}/>
             <div className={open ? styles.basket_widget : styles.basket_widget__hidden}>
-                <div className={styles.cart}>
-                    <span className={styles.cart_title}>CART ({length})</span>
-                    <button className={styles.remove}>Remove all</button>
-                </div>
+                {
+                    length !== 0 && <div className={styles.cart}>
+                        <span className={styles.cart_title}>CART ({length})</span>
+                        <button className={styles.remove}>Remove all</button>
+                    </div>
+                }
                 <div className={styles.cart_list}>
-                    {
+                    {length !== 0 ?
                         Object.entries(products).map(([k, v], idx) => {
                             return (
                                 <div className={styles.cart_item} key={idx}>
@@ -82,15 +85,21 @@ const Basket = () => {
                                 </div>
                             )
                         })
+                        : <span className={styles.basket_empty}>Basket is empty</span>
                     }
                 </div>
-                <div className={styles.total}>
-                    <span className={styles.total_title}>TOTAL</span>
-                    <span className={styles.total_amount}>$ {total}</span>
-                </div>
-                <div className={styles.cart_btn}>
-                    <CustomLink style={'100% !important'} link={'/basket'} type={"default"} text={'CHECKOUT'}/>
-                </div>
+                {
+                    length !== 0 &&
+                    <>
+                        <div className={styles.total}>
+                            <span className={styles.total_title}>TOTAL</span>
+                            <span className={styles.total_amount}>$ {total}</span>
+                        </div>
+                        <div className={styles.cart_btn}>
+                            <CustomLink style={'100% !important'} link={'/basket'} type={"default"} text={'CHECKOUT'}/>
+                        </div>
+                    </>
+                }
             </div>
             <div onClick={() => setOpen(false)}
                  className={open ? styles.basket_widget__bg : styles.basket_widget__hidden}></div>

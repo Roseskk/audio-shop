@@ -97,6 +97,17 @@
 
       }
     }
+
+    .basket_empty {
+      font-weight: 700;
+      font-size: $textH4;
+      letter-spacing: $h4Letter;
+
+      color: black;
+      opacity: 0.5;
+
+      text-align: center;
+    }
   }
 
   .total {

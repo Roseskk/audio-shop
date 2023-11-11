@@ -37,12 +37,17 @@ export const basketSlice = createSlice({
                 localStorage.setItem(`products`, `${JSON.stringify(state.products)}`)
 
             } else {
-                state.products[action.payload.name] = {
-                    price: action.payload.price,
-                    count: action.payload.count,
-                    thumbnail: action.payload.thumbnail
+                if (count === 0) {
+                    delete state.products[action.payload.name]
+                    localStorage.setItem('products', `${JSON.stringify(state.products)}`)
+                } else {
+                    state.products[action.payload.name] = {
+                        price: action.payload.price,
+                        count: action.payload.count,
+                        thumbnail: action.payload.thumbnail
+                    }
+                    localStorage.setItem(`products`, `${JSON.stringify(state.products)}`)
                 }
-                localStorage.setItem(`products`, `${JSON.stringify(state.products)}`)
             }
         },
         unsetProducts: (state, action: PayloadAction<string>) => {

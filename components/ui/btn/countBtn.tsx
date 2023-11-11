@@ -23,29 +23,26 @@ const CountBtn = (props: { thumbnail: string, name: string, price: string }) => 
         }
     }, [])
 
-    useEffect(() => {
-        if (counter[props.name]?.count) {
-            setCount(counter[props.name]?.count)
-        }
-    }, [counter[props.name]]);
-
     const handleChange = (type: string) => {
         if (type === 'plus') {
-            setCount(prev => prev + 1)
-            dispatch(setProducts({name: props.name, count: count + 1, thumbnail: props.thumbnail, price: props.price}))
+            if (counter[props.name]?.count === undefined) {
+                dispatch(setProducts({name: props.name, count: 1, thumbnail: props.thumbnail, price: props.price}))
+            } else {
+                dispatch(setProducts({name: props.name, count: counter[props.name]?.count + 1, thumbnail: props.thumbnail, price: props.price}))
+            }
+
         } else {
-            if (count === 0) {
+            if (counter[props.name]?.count === 0 || counter[props.name]?.count === null || counter[props.name]?.count === undefined) {
                 return
             }
-            setCount(prev => prev - 1)
-            dispatch(setProducts({name: props.name, count: count - 1, thumbnail: props.thumbnail, price: props.price}))
+            dispatch(setProducts({name: props.name, count: counter[props.name]?.count - 1, thumbnail: props.thumbnail, price: props.price}))
         }
     }
 
     return (
         <div className={styles.count_wrapper}>
             <button className={styles.minus} onClick={() => handleChange('minus')}>-</button>
-            <button className={styles.count}>{count}</button>
+            <button className={styles.count}>{counter[props.name]?.count ?? 0}</button>
             <button className={styles.plus} onClick={() => handleChange('plus')}>+</button>
         </div>
     )

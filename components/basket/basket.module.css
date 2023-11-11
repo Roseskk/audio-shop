@@ -69,6 +69,14 @@
   color: black;
   opacity: 0.5;
 }
+.basket_widget .cart_list .basket_empty {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: black;
+  opacity: 0.5;
+  text-align: center;
+}
 .basket_widget .total {
   display: flex;
   justify-content: space-between;

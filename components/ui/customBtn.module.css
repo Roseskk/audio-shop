@@ -6,29 +6,21 @@
 
 .transparent {
   border: 1px solid black;
-
   color: black;
   letter-spacing: 1px;
-
   font-weight: 700;
   font-size: 13px;
-
   background-color: transparent;
 }
 
 .default {
-
   letter-spacing: 1px;
-
   font-weight: 700;
   font-size: 13px;
-
   background-color: #D87D4A;
   color: white;
-
   text-align: center;
 }
-
 
 .glass {
   display: flex;
@@ -36,15 +28,14 @@
   gap: 10px;
   letter-spacing: 1px;
   padding: 0;
-
   font-weight: 700;
   font-size: 13px;
-
   background-color: transparent;
   color: gray;
-
-  .arrow {
-    margin-left: 10px;
-    color: #D87D4A;
-  }
 }
+.glass .arrow {
+  margin-left: 10px;
+  color: #D87D4A;
+}
+
+/*# sourceMappingURL=customBtn.module.css.map */
