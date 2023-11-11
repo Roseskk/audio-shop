@@ -1,0 +1,11 @@
+.summary_section {
+  display: flex;
+  flex-direction: column;
+  padding: 33px;
+  gap: 30px;
+  grid-column: 3;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/*# sourceMappingURL=summary.module.css.map */

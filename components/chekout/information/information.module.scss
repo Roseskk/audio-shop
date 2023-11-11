@@ -1,0 +1,25 @@
+@import "../../../styles/abstracts/variables";
+
+
+.checkout_form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 54px 48px;
+
+  gap: 50px;
+
+  grid-column: 1/3;
+
+  background-color: white;
+
+  border-radius: 8px;
+
+  .checkout_form__title {
+    font-weight: 700;
+    font-size: $textH2;
+    letter-spacing: $h2Letter;
+
+    color: black;
+  }
+}

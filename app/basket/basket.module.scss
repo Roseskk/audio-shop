@@ -1,0 +1,20 @@
+.basket_main {
+  background-color: #F2F2F2;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: fixed;
+
+    background-color: #F2F2F2;
+    top: 0;
+    left: 50%;
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(-50%);
+    z-index: -2;
+
+  }
+}
+
+

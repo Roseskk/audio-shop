@@ -1,8 +1,15 @@
 import React from 'react';
+import Breadcrumb from "@/components/ui/breadcrumb/breadcrumb";
+import Checkout from "@/components/chekout/checkout";
+
+import styles from './basket.module.scss';
 
 const Page = () => {
     return (
-        <main>BASKET</main>
+        <main className={styles.basket_main}>
+            <Breadcrumb/>
+            <Checkout/>
+        </main>
     )
 }
 
