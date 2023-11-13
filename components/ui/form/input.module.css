@@ -29,6 +29,7 @@
   color: black;
   padding: 20px 24px;
   border-radius: 8px;
+  border: 1px solid #CFCFCF;
 }
 .input_wrapper .input_error {
   width: 100%;
@@ -40,6 +41,24 @@
 
 .error {
   color: red;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #CFCFCF;
+  padding: 18px 16px;
+  border-radius: 8px;
+}
+.radio .radio_label {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+}
+
+.radio_active {
+  border: 1px solid #D87D4A;
 }
 
 /*# sourceMappingURL=input.module.css.map */

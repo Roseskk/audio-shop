@@ -54,4 +54,46 @@
   gap: 0 16px;
 }
 
+.section_payment {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.section_payment .payment_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+.section_payment .payment_wrapper .payment_title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.21px;
+  color: black;
+}
+.section_payment .payment_wrapper .payment_btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eMoney {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+
+.cash {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: center;
+}
+.cash .text {
+  font-weight: 500;
+  font-size: 15px;
+  color: black;
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=information.module.css.map */
