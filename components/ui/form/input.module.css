@@ -1,0 +1,45 @@
+.input_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.input_wrapper .label_wrapper {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.input_wrapper .label_wrapper .label {
+  font-weight: 700;
+  font-size: 12px;
+}
+.input_wrapper .label_wrapper .label_name_error {
+  font-weight: 700;
+  font-size: 12px;
+  color: #CD2C2C;
+}
+.input_wrapper .label_wrapper .label_error {
+  font-weight: 500;
+  font-size: 12px;
+  color: #CD2C2C;
+}
+.input_wrapper .input {
+  width: 100%;
+  color: black;
+  padding: 20px 24px;
+  border-radius: 8px;
+}
+.input_wrapper .input_error {
+  width: 100%;
+  color: black;
+  border: 1px solid #CD2C2C;
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.error {
+  color: red;
+}
+
+/*# sourceMappingURL=input.module.css.map */

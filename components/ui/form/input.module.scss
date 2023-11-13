@@ -1,0 +1,55 @@
+
+.input_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  .label_wrapper {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+    .label {
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .label_name_error {
+      font-weight: 700;
+      font-size: 12px;
+
+      color: #CD2C2C;
+    }
+
+    .label_error {
+      font-weight: 500;
+      font-size: 12px;
+      color: #CD2C2C;
+    }
+  }
+
+  .input {
+    width: 100%;
+    color: black;
+
+    padding: 20px 24px;
+
+    border-radius: 8px;
+  }
+
+  .input_error {
+    width: 100%;
+    color: black;
+
+    border: 1px solid #CD2C2C;
+    border-radius: 8px;
+
+    padding: 20px 24px;
+  }
+}
+
+.error {
+  color: red;
+}

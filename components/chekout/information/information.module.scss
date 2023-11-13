@@ -23,3 +23,58 @@
     color: black;
   }
 }
+
+.checkout_sub {
+  font-weight: 700;
+  font-size: 13px;
+
+  color: $firstColor;
+
+  letter-spacing: 0.93px;
+}
+
+.section_billing {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .billing_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .billing_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 16px;
+    }
+
+    .billing_phone {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+    }
+  }
+}
+
+.section_shipping {
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  .zip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+  }
+
+  .country {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+
+  }
+}
