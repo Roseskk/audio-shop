@@ -3,6 +3,7 @@ import Image from "next/image";
 import CustomLink from "@/components/ui/customLink";
 
 import styles from './recommendation.module.scss';
+import {getTitle} from "@/utils/utils";
 
 export async function getRecommendationData() {
     const url = `${process.env.API}/products?&acf_format=standard&_fields=id,title,acf,slug`
@@ -23,7 +24,7 @@ const Recommendations = async () => {
                             <div className={styles.img__wrapper}>
                                 <Image width={200} height={193} src={product.acf.thumbnail} alt={'thumbnail'}/>
                             </div>
-                            <h2 className={styles.item_title}>{product.title.rendered}</h2>
+                            <h2 className={styles.item_title}>{getTitle(product)}</h2>
                             <div className={styles.btn_wrapper}>
                                 <CustomLink link={`/products/${product.acf.category.slug}/${product.id.toString()}`}
                                             type={"default"} text={'SEE PRODUCT'}/>
