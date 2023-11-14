@@ -95,7 +95,7 @@ const Basket = () => {
                             <span className={styles.total_title}>TOTAL</span>
                             <span className={styles.total_amount}>$ {total}</span>
                         </div>
-                        <div className={styles.cart_btn}>
+                        <div onClick={() => setOpen(false)} className={styles.cart_btn}>
                             <CustomLink style={'100% !important'} link={'/basket'} type={"default"} text={'CHECKOUT'}/>
                         </div>
                     </>
