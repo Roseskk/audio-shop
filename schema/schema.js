@@ -10,16 +10,11 @@ export const CheckoutSchema = Yup.object().shape({
     city: Yup.string(),
     country: Yup.string(),
     paymentType: Yup.string().required('You must select a payment method'),
-    number: Yup.string().when('paymentType', (paymentType, schema) => {
-        console.log(paymentType)
-        return paymentType[0] === 'e-money'
-            ? schema.required('Number is required for e-money payment method')
-            : schema.notRequired();
+    number: Yup.string()
+        .when('paymentType', (pType, field) => {
+            return pType[0] === 'e-money' ? field.required() : field
+        }),
+    PIN: Yup.string().when('paymentType', (pType, field) => {
+        return pType[0] === 'e-money' ? field.required() : field
     }),
-
-    PIN: Yup.string().when('paymentType', (paymentType, schema) => {
-        return paymentType[0] === 'e-money'
-            ? schema.required('PIN is required for e-money payment method')
-            : schema.notRequired();
-    })
 })

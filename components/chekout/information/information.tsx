@@ -36,9 +36,10 @@ const Information = () => {
                 }}
             >
                 {(props) => {
+
                     useEffect(() => {
-                        // setForm(props);
-                    }, [props, setForm]);
+                        setForm(props);
+                    }, [props.values, props.errors]);
 
                     return (
                         <Form>

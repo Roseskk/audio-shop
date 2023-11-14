@@ -1,36 +1,25 @@
-@import "../../../styles/abstracts/variables";
-
 .summary_section {
   display: flex;
   flex-direction: column;
-
   padding: 33px;
-
   gap: 30px;
-
   grid-column: 3;
   align-self: start;
   background-color: white;
-
   border-radius: 8px;
-
-  .summary_section__title {
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 1.29px;
-
-    color: black;
-  }
+}
+.summary_section .summary_section__title {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.29px;
+  color: black;
 }
 
 .summary_btn {
   width: 100%;
   padding: 15px 60px;
-
-  background-color: $firstColor;
-
+  background-color: #D87D4A;
   color: white;
-
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 1px;
@@ -39,3 +28,5 @@
 .summary_disabled {
   background-color: #FBAF85;
 }
+
+/*# sourceMappingURL=summary.module.css.map */
