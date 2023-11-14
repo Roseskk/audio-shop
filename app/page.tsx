@@ -5,7 +5,7 @@ import AboutAudio from "@/components/about/aboutAudio";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 
-export async function getProducts() {
+async function getProducts() {
     const url = `${process.env.API}/products?&acf_format=standard&_fields=id,title,acf,slug`;
 
     const res = await fetch(url)

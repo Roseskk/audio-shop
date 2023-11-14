@@ -6,7 +6,7 @@ import Recommendations from "@/components/recommendation/recommendations";
 import ProductCards from "@/components/productCards/productCards";
 import AboutAudio from "@/components/about/aboutAudio";
 
-export async function getProductData(params: { product: string }) {
+async function getProductData(params: { product: string }) {
     const url = `${process.env.APIV1}/product/${params.product}`
 
     const result = await fetch(url)
