@@ -17,9 +17,9 @@ const Summary = () => {
             .then(() => {
                 form?.validateForm().then((err) => {
                     if (Object.keys(err).length === 0) {
-                        alert('Valid')
+                        console.log('Valid')
                     } else {
-                        alert('Invalid')
+                        console.log('Invalid')
                     }
                 })
             })
@@ -41,10 +41,9 @@ const Summary = () => {
             <h3 className={styles.summary_section__title}>SUMMARY</h3>
             <ul className={styles.summary_list}>
                 {
-                    Object.entries(products).map(([key, value]) => {
-                        console.log(value.price)
+                    Object.entries(products).map(([key, value], idx) => {
                         return (
-                            <li className={styles.summary_item}>
+                            <li key={idx} className={styles.summary_item}>
                                 <div className={styles.summary_left}>
                                     <div className={styles.summary_img}>
                                         <Image width={64} height={64} src={value.thumbnail} alt={'thumbnail'}/>

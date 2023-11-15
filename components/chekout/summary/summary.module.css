@@ -8,6 +8,16 @@
   background-color: white;
   border-radius: 8px;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .summary_section {
+    grid-column: 1;
+  }
+}
+@media (max-width: 767px) {
+  .summary_section {
+    grid-column: 1;
+  }
+}
 .summary_section .summary_section__title {
   font-weight: 700;
   font-size: 18px;

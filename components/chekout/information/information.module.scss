@@ -1,4 +1,5 @@
 @import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
 
 
 .checkout_form {
@@ -14,6 +15,13 @@
   background-color: white;
 
   border-radius: 8px;
+
+  @include respond-to('laptop') {
+    grid-column: 1;
+  }
+  @include respond-to('mobile') {
+    grid-column: 1;
+  }
 
   .checkout_form__title {
     font-weight: 700;

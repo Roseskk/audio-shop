@@ -7,6 +7,16 @@
   background-color: white;
   border-radius: 8px;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .checkout_form {
+    grid-column: 1;
+  }
+}
+@media (max-width: 767px) {
+  .checkout_form {
+    grid-column: 1;
+  }
+}
 .checkout_form .checkout_form__title {
   font-weight: 700;
   font-size: 32px;
