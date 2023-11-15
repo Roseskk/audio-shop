@@ -40,7 +40,6 @@ const Basket = () => {
                 const priceNumber = parseFloat(v.price.replace(/,/g, ""));
                 return priceNumber * v.count;
             }).reduce((acc, cur) => acc + cur, 0);
-            console.log(total)
             setTotal(total);
 
         }
