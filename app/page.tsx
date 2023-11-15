@@ -2,8 +2,6 @@ import Slider from "@/components/slider/slider";
 import ProductCards from "@/components/productCards/productCards";
 import Gallery from "@/components/gallery/gallery";
 import AboutAudio from "@/components/about/aboutAudio";
-import Footer from "@/components/footer/footer";
-import Header from "@/components/header/header";
 
 async function getProducts() {
     const url = `${process.env.API}/products?&acf_format=standard&_fields=id,title,acf,slug`;
