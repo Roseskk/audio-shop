@@ -1,4 +1,5 @@
 @import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
 
 .section_about__slug {
   position: relative;
@@ -18,6 +19,10 @@
     text-transform: uppercase;
 
     color: white;
+
+    @include respond-to('mobile') {
+      font-size: $textH4;
+    }
   }
 
 

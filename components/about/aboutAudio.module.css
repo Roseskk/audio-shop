@@ -1,0 +1,134 @@
+.section_audio {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_audio {
+    flex-direction: column-reverse;
+    gap: 61px;
+  }
+}
+@media (max-width: 767px) {
+  .section_audio {
+    flex-direction: column-reverse;
+    gap: 61px;
+  }
+}
+.section_audio .audio_content {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_audio .audio_content {
+    max-width: 100%;
+    padding: 0 98px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .section_audio .audio_content {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.section_audio .audio_content .title {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_audio .audio_content .title {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .section_audio .audio_content .title {
+    text-align: center;
+    font-size: 28px;
+  }
+}
+.section_audio .audio_content .title .sub {
+  color: #D87D4A;
+}
+.section_audio .audio_content .content {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: black;
+  opacity: 0.5;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_audio .audio_content .content {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .section_audio .audio_content .content {
+    text-align: center;
+  }
+}
+.section_audio .image_container {
+  width: 100%;
+  position: relative;
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_audio .image_container {
+    display: block;
+    max-width: 100%;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .section_audio .image_container {
+    display: block;
+    max-width: 100%;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+.section_audio .image_container img {
+  object-fit: cover;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_audio .image_container img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .section_audio .image_container img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .image_fix {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .image_fix {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=aboutAudio.module.css.map */

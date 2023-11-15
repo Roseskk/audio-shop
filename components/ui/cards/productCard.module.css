@@ -1,0 +1,134 @@
+.conditional_card__render {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .conditional_card__render {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .conditional_card__render {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .conditional_card__render img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .conditional_card__render img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.product_card__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .product_card__item {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .product_card__item {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .product_card__item img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .product_card__item img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.content {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .content {
+    padding: 0 100px;
+    width: 100%;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    padding: 0 20px;
+    width: 100%;
+    align-items: center;
+  }
+}
+.content .new {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 10px;
+  line-height: 19px;
+  color: #D87D4A;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .content .new {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .content .new {
+    margin-top: 10px;
+  }
+}
+.content .title {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  line-height: 44px;
+  color: black;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .content .title {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .content .title {
+    text-align: center;
+    font-size: 28px;
+  }
+}
+.content .content_text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: black;
+  opacity: 0.5;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .content .content_text {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .content .content_text {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=productCard.module.css.map */
