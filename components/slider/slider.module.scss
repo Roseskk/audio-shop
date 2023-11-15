@@ -1,11 +1,12 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
 .section_slider {
   position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   .slider_list {
     display: flex;
@@ -43,6 +44,23 @@
   display: flex;
   align-items: center;
   gap: 150px;
+  width: 100% !important;
+
+  @include respond-to('laptop') {
+    justify-content: center;
+    gap: 0;
+    padding: 167px 0;
+
+  }
+
+  @include respond-to('mobile') {
+    justify-content: center;
+    gap: 0;
+
+    padding: 167px 0;
+
+  }
+
 
   .slide_content {
     display: flex;
@@ -53,6 +71,20 @@
 
     &:last-child {
       gap: 40px;
+    }
+
+    @include respond-to('laptop') {
+      align-items: center;
+      justify-content: center;
+
+      max-width: 500px;
+    }
+
+    @include respond-to('mobile') {
+      align-items: center;
+      justify-content: center;
+
+      max-width: 500px;
     }
 
     .new_product {
@@ -75,10 +107,40 @@
     }
 
     .subtitle {
-      color: gray;
+      color: white;
       font-size: 25px;
 
       font-weight: 400;
+
+      opacity: 0.75;
+
+      @include respond-to('laptop') {
+        text-align: center;
+        font-size: $textBody;
+
+        line-height: 25px;
+      }
+
+      @include respond-to('mobile') {
+        text-align: center;
+        font-size: $textBody;
+
+        line-height: 25px;
+      }
     }
+  }
+
+  .swiper_img {
+
+    @include respond-to('laptop') {
+      position: absolute;
+      z-index: -10;
+    }
+
+    @include respond-to('mobile') {
+      position: absolute;
+      z-index: -10;
+    }
+
   }
 }

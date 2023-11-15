@@ -17,7 +17,9 @@ const AboutAudio = () => {
                     equipment.
                 </p>
             </div>
-            <Image src={audio} alt={'best_audio'}/>
+            <div className={styles.image_container}>
+                <Image src={audio} alt={'best_audio'} objectFit={'cover'}/>
+            </div>
         </section>
     )
 }

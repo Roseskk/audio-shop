@@ -18,13 +18,13 @@ interface Props {
 }
 
 const Slider: React.FC<Props> = ({products}) => {
-    console.log(products)
     return (
         <section className={styles.section_slider}>
             <Divider/>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={1}
+                spaceBetween={450}
                 navigation={false}
                 autoplay={{
                     delay: 2500,
@@ -34,6 +34,29 @@ const Slider: React.FC<Props> = ({products}) => {
                     clickable: false
                 }}
                 loop={true}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    400: {
+                        slidesPerView: 1,
+                    },
+                    639: {
+                        slidesPerView: 1,
+                    },
+                    865: {
+                        slidesPerView: 1,
+                    },
+                    1000: {
+                        slidesPerView: 1,
+                    },
+                    1500: {
+                        slidesPerView: 1,
+                    },
+                    1700: {
+                        slidesPerView: 1,
+                    }
+                }}
                 className={styles.swiper}
             >
                 {products.map((product) => (
@@ -47,7 +70,8 @@ const Slider: React.FC<Props> = ({products}) => {
                             <CustomLink link={`/products/${product.acf.category.slug}/${product.id}`} type={'default'}
                                         text={'SEE PRODUCTS'}/>
                         </div>
-                        <Image src={product.acf.heroimage} width={710} height={729} alt={'title'}/>
+                        <Image className={styles.swiper_img} src={product.acf.heroimage} width={710} height={729}
+                               alt={'title'}/>
                     </SwiperSlide>
                 ))}
             </Swiper>

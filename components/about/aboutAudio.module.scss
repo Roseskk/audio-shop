@@ -1,4 +1,5 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .section_audio {
   margin-top: 200px;
@@ -7,12 +8,37 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond-to('laptop') {
+    flex-direction: column-reverse;
+    gap: 61px;
+
+  }
+  @include respond-to('mobile') {
+    flex-direction: column-reverse;
+    gap: 61px;
+
+  }
+
   .audio_content {
     max-width: 450px;
 
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @include respond-to('laptop') {
+      max-width: 100%;
+      padding: 0 98px;
+
+      align-items: center;
+      justify-content: center;
+    }
+    @include respond-to('mobile') {
+      max-width: 100%;
+
+      align-items: center;
+      justify-content: center;
+    }
 
     .title {
       font-weight: 700;
@@ -21,6 +47,16 @@
       line-height: $h2Line;
 
       text-transform: uppercase;
+
+      @include respond-to('laptop') {
+        text-align: center;
+
+      }
+      @include respond-to('mobile') {
+        text-align: center;
+        font-size: $textH4;
+
+      }
 
       .sub {
         color: $firstColor;
@@ -33,7 +69,59 @@
       font-size: $textBody;
       line-height: $bodyLine;
 
+      color: black;
+
       opacity: 0.5;
+
+      @include respond-to('laptop') {
+        text-align: center;
+
+      }
+      @include respond-to('mobile') {
+        text-align: center;
+
+      }
+    }
+  }
+
+  .image_container {
+    width: 100%;
+    position: relative;
+
+    @include respond-to('laptop') {
+      max-width: 100%;
+      height: 300px;
+      overflow: hidden;
+
+      object-fit: cover;
+
+      border-radius: 8px;
+    }
+    @include respond-to('mobile') {
+      max-width: 100%;
+      height: 300px;
+      overflow: hidden;
+
+      object-fit: cover;
+
+      border-radius: 8px;
+    }
+
+    img {
+      object-fit: cover;
+
+      @include respond-to('laptop') {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+      @include respond-to('mobile') {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }

@@ -1,15 +1,47 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
 .navigation {
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  .navigation_logo {
+
+    display: flex;
+    align-items: center;
+    gap: 42px;
+
+    .burger {
+      cursor: pointer;
+      
+      transform: translateY(-3px);
+      display: none;
+
+      @include respond-to('laptop') {
+        display: block;
+      }
+
+      @include respond-to('mobile') {
+        display: block;
+      }
+    }
+  }
+
   .navigation_list {
 
     display: flex;
     align-items: center;
     gap: 34px;
+
+    @include respond-to('laptop') {
+      display: none;
+    }
+
+    @include respond-to('mobile') {
+      display: none;
+    }
 
     .navigation_item {
 

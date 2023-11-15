@@ -4,7 +4,6 @@ import {IHeader} from "@/types/types";
 import Image from 'next/image';
 
 import logo from '../../assets/images/header/audiophile.svg';
-import basket from '../../assets/images/header/basket.svg';
 import Link from "next/link";
 
 import styles from './navigation.module.scss';
@@ -24,9 +23,18 @@ const Navigation = (props: { type?: string }) => {
     const pathname = usePathname()
     return (
         <nav className={styles.navigation}>
-            <Link href={'/'}>
-                <Image src={logo} alt={'logo'}/>
-            </Link>
+            <div className={styles.navigation_logo}>
+                <svg className={styles.burger} xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                     viewBox="0 0 16 15"
+                     fill="none">
+                    <rect width="16" height="3" fill="white"/>
+                    <rect y="6" width="16" height="3" fill="white"/>
+                    <rect y="12" width="16" height="3" fill="white"/>
+                </svg>
+                <Link href={'/'}>
+                    <Image src={logo} alt={'logo'}/>
+                </Link>
+            </div>
             <ul className={styles.navigation_list}>
                 {
                     navLinks.map((link) => (

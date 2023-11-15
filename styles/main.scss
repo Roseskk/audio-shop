@@ -6,4 +6,12 @@
 
 body {
   padding: 0 165px;
+
+  @include respond-to('laptop') {
+    padding: 0 40px;
+  }
+
+  @include respond-to('mobile') {
+    padding: 0 24px;
+  }
 }

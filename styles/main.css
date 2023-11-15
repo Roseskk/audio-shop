@@ -60,5 +60,15 @@ input, textarea {
 body {
   padding: 0 165px;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  body {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0 24px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

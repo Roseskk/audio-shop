@@ -2,14 +2,11 @@
 
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == 'small' {
+  @if $breakpoint == 'mobile' {
     @media (max-width: 767px) {@content;}
   }
-  @else if $breakpoint == 'medium' {
-    @media (min-width: 768px) and (max-width: 1023px) {@content;}
-  }
-  @else if $breakpoint == 'large' {
-    @media (min-width: 1024px) and (max-width: 1440px) {@content; }
+  @else if $breakpoint == 'laptop' {
+    @media (min-width: 768px) and (max-width: 1440px) {@content; }
   }
   @else if $breakpoint == 'extra' {
     @media  (min-width: 1441px) {@content;}
