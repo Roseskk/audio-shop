@@ -1,4 +1,5 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .section_features {
   margin-top: 160px;
@@ -12,6 +13,14 @@
     justify-content: space-between;
     gap: 125px;
 
+    @include respond-to('laptop') {
+      flex-direction: column;
+    }
+    @include respond-to('mobile') {
+      flex-direction: column;
+      gap: 88px;
+    }
+
     .features_content {
       display: flex;
       flex-direction: column;
@@ -23,6 +32,10 @@
         color: black;
         font-size: $textH3;
         letter-spacing: $h3Letter;
+
+        @include respond-to('mobile') {
+          font-size: $textH4;
+        }
       }
 
       .features_left__content {
@@ -40,11 +53,20 @@
       flex-direction: column;
       gap: 32px;
 
+      @include respond-to('laptop') {
+        flex-direction: row;
+        gap: 200px;
+      }
+
       .features_box__title {
         font-weight: 700;
         color: black;
         font-size: $textH3;
         letter-spacing: $h3Letter;
+
+        @include respond-to('mobile') {
+          font-size: $textH4;
+        }
       }
 
       .features_box__list {
@@ -82,10 +104,41 @@
     display: flex;
     gap: 30px;
 
+    @include respond-to('laptop') {
+
+      img {
+        max-width: 395px;
+        height: 368px;
+      }
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+    }
+
     .features_img__left {
       display: flex;
       flex-direction: column;
       gap: 32px;
+
+      @include respond-to('laptop') {
+        gap: 20px;
+        img {
+          max-width: 277px;
+          height: 174px;
+        }
+      }
+
+      @include respond-to('mobile') {
+        gap: 20px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
 
       .test {
         width: 100%;

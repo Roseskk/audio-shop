@@ -1,4 +1,5 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .section_rec {
   margin-top: 160px;
@@ -15,6 +16,10 @@
     color: black;
 
     text-align: center;
+
+    @include respond-to('mobile') {
+      font-size: $textH4;
+    }
   }
 
   .rec_list {
@@ -22,10 +27,10 @@
     gap: 120px;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    //grid-template-columns: 1fr 1fr 1fr;
-    //grid-template-rows: auto;
-    //
-    //gap: 0 30px;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
 
     .rec_item {
       display: flex;
@@ -37,6 +42,10 @@
         padding: 62px 100px 62px 100px;
         display: grid;
         place-items: center;
+
+        @include respond-to('mobile') {
+          padding: 0;
+        }
       }
 
       .item_title {
