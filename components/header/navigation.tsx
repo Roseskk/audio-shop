@@ -65,20 +65,6 @@ const Navigation = (props: { type?: string }) => {
                 </ul>
             }
             {
-                !props.type && <ul className={styles.navigation_list}>
-                    {
-                        navLinks.map((link) => (
-                            <li key={link.id} className={styles.navigation_item}>
-                                <Link className={styles.navigation_link} href={link.href!}>
-                                <span
-                                    className={pathname === link.href ? styles.navigation_link__title : ''}>{link.title!}</span>
-                                </Link>
-                            </li>
-                        ))
-                    }
-                </ul>
-            }
-            {
                 !props.type && <Basket/>
             }
         </nav>
