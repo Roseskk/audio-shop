@@ -14,6 +14,11 @@
     padding: 20px;
   }
 }
+@media (max-width: 767px) {
+  .section_gallery .first_block__wrapper {
+    padding: 20px;
+  }
+}
 .section_gallery .first_block__wrapper .first_block {
   padding: 0 95px 0 117px;
   display: flex;
@@ -45,6 +50,8 @@
     align-items: center;
     justify-content: unset;
     background-position: center;
+    border-radius: 0px;
+    padding: 0;
   }
   .section_gallery .first_block__wrapper .first_block img {
     width: 172px;
@@ -126,7 +133,6 @@
   width: 100%;
   height: 352px;
   background-image: url("../../assets/images/gallery/image-speaker-zx7.jpg");
-  /* Путь к вашему изображению */
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -142,6 +148,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 30px;
+}
+@media (max-width: 767px) {
+  .section_gallery .third_block {
+    grid-template-columns: 1fr;
+    gap: 30px 30px;
+  }
 }
 .section_gallery .third_block .left {
   background-image: url("../../assets/images/gallery/image-earphones-yx1.jpg");
@@ -159,6 +171,16 @@
   padding: 101px 0 101px 95px;
   border-radius: 8px;
   background-color: #F1F1F1;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .section_gallery .third_block .right {
+    padding: 101px 50px;
+  }
+}
+@media (max-width: 767px) {
+  .section_gallery .third_block .right {
+    padding: 101px 50px;
+  }
 }
 
 .block_content {

@@ -1,4 +1,5 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .footer {
   margin-top: 200px;
@@ -28,6 +29,11 @@
 
     justify-content: space-between;
 
+    @include respond-to('mobile') {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .content {
       max-width: 550px;
 
@@ -38,6 +44,10 @@
       opacity: 0.5;
 
       color: white;
+
+      @include respond-to('mobile') {
+        text-align: center;
+      }
     }
 
     .ico_list {
@@ -47,6 +57,11 @@
       display: flex;
       align-items: center;
       gap: 16px;
+
+      @include respond-to('mobile') {
+        margin-top: 20px;
+        align-self: center;
+      }
 
       .ico_item {
 

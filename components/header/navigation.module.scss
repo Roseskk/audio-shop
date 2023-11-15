@@ -15,7 +15,7 @@
 
     .burger {
       cursor: pointer;
-      
+
       transform: translateY(-3px);
       display: none;
 
@@ -60,4 +60,44 @@
       }
     }
   }
+}
+
+
+.navigation_list_footer {
+  margin-top: 41px;
+  display: none;
+
+  @include respond-to('laptop') {
+    display: none;
+  }
+
+  @include respond-to('mobile') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .navigation_item {
+
+    .navigation_link {
+
+      color: $pageColor;
+      font-weight: 700;
+      font-size: $textH6;
+      letter-spacing: $h4Letter;
+
+      .navigation_link__title {
+        //placeholder
+        color: $firstColor;
+      }
+
+    }
+  }
+}
+
+
+.col {
+  flex-direction: column;
 }

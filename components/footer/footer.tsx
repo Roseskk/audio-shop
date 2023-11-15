@@ -1,8 +1,6 @@
 import React from 'react';
 import Navigation from "@/components/header/navigation";
 import styles from './footer.module.scss';
-import Link from "next/link";
-import Image from "next/image";
 
 
 const Footer = () => {
