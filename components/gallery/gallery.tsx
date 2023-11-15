@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from "next/image";
 import zx9 from '../../assets/images/gallery/image-speaker-zx9.png';
-import yx1 from '../../assets/images/gallery/image-earphones-yx1.jpg';
-import zx7 from '../../assets/images/gallery/image-speaker-zx7.jpg';
 import CustomLink from "@/components/ui/customLink";
 import styles from './gallery.module.scss';
 
@@ -16,7 +14,9 @@ const Gallery = () => {
                         <h2 className={styles.title}>ZX9 SPEAKER</h2>
                         <p className={styles.content}>Upgrade to premium speakers that are phenomenally built to deliver
                             truly remarkable sound.</p>
-                        <CustomLink link={'products/speakers/96'} type={"transparent"} text={'SEE PRODUCT'}/>
+                        <div>
+                            <CustomLink link={'products/speakers/96'} type={"transparent"} text={'SEE PRODUCT'}/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,10 @@
   flex-direction: column;
   align-items: center;
 
+  @include respond-to('mobile') {
+    margin: -24px;
+  }
+
   .slider_list {
     display: flex;
     align-items: center;
@@ -57,7 +61,7 @@
     justify-content: center;
     gap: 0;
 
-    padding: 167px 0;
+    padding: 167px 20px;
 
   }
 

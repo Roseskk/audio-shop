@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import Divider from "@/components/ui/divider";
 import {Products} from "@/types/types";
@@ -18,6 +18,7 @@ interface Props {
 }
 
 const Slider: React.FC<Props> = ({products}) => {
+    
     return (
         <section className={styles.section_slider}>
             <Divider/>

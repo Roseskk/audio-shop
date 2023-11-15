@@ -1,4 +1,5 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .section_gallery {
   display: flex;
@@ -11,11 +12,43 @@
     background-color: #D87D4A;
     border-radius: 8px;
 
+    @include respond-to('laptop') {
+      padding: 20px;
+    }
+    @include respond-to('mobile') {
+    }
+
     .first_block {
       padding: 0 95px 0 117px;
       display: flex;
       justify-content: space-around;
       align-items: end;
+
+      @include respond-to('laptop') {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+
+        background-position: center;
+
+        img {
+          width: 172px;
+          height: 207px;
+        }
+      }
+
+      @include respond-to('mobile') {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+
+        background-position: center;
+
+        img {
+          width: 172px;
+          height: 207px;
+        }
+      }
 
       background-color: $firstColor;
 
@@ -24,12 +57,9 @@
       height: 560px;
       overflow: hidden;
 
-      background-image: url('../../assets/images/gallery/pattern-circles.svg'); /* Путь к вашему изображению */
-      background-position: -60% 20%; /* Расположение слева и по центру по вертикали */
+      background-image: url('../../assets/images/gallery/pattern-circles.svg');
+      background-position: -60% 20%;
       background-repeat: no-repeat;
-
-      //background-attachment: fixed;
-
 
       img {
         transform: translateY(20px);
@@ -42,6 +72,22 @@
 
         max-width: 349px;
 
+        @include respond-to('laptop') {
+          justify-content: center;
+
+          div {
+            align-self: center;
+          }
+        }
+
+        @include respond-to('mobile') {
+          justify-content: center;
+
+          div {
+            align-self: center;
+          }
+        }
+
 
         .title {
           font-weight: 700;
@@ -52,6 +98,15 @@
           color: white;
 
           z-index: 100;
+
+          @include respond-to('laptop') {
+            text-align: center;
+            font-size: 56px;
+          }
+          @include respond-to('mobile') {
+            text-align: center;
+            font-size: 36px;
+          }
         }
 
         .content {
@@ -66,6 +121,14 @@
           color: white;
 
           opacity: 0.55;
+
+          @include respond-to('laptop') {
+            text-align: center;
+          }
+
+          @include respond-to('mobile') {
+            text-align: center;
+          }
         }
 
         a {
