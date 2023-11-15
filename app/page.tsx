@@ -5,7 +5,7 @@ import AboutAudio from "@/components/about/aboutAudio";
 
 async function getProducts() {
     const url = `${process.env.API}/products?&acf_format=standard&_fields=id,title,acf,slug`;
-
+    
     const res = await fetch(url)
 
     if (!res.ok) {
