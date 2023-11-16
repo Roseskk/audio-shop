@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {ReactNode, useState} from 'react';
 import {IHeader} from "@/types/types";
 import Image from 'next/image';
 
@@ -9,6 +9,7 @@ import Link from "next/link";
 import styles from './navigation.module.scss';
 import {usePathname} from "next/navigation";
 import Basket from "@/components/basket/basket";
+import ProductCards from "@/components/productCards/productCards";
 
 type header = Partial<IHeader>
 
@@ -19,14 +20,16 @@ const navLinks: header[] = [
     {id: 4, title: 'EARPHONES', href: '/products/earphones'},
 ]
 
-const Navigation = (props: { type?: string }) => {
+const Navigation = (props: { type?: string, children?: React.ReactNode }) => {
+    const [burger, setBurger] = useState<boolean>(false)
     const pathname = usePathname()
     return (
         <nav className={`${styles.navigation} ${props.type === 'footer' ? styles.col : ''} }`}>
             <div className={styles.navigation_logo}>
                 {
                     !props.type &&
-                    <svg className={styles.burger} xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                    <svg onClick={() => setBurger(prev => !prev)} className={styles.burger}
+                         xmlns="http://www.w3.org/2000/svg" width="16" height="15"
                          viewBox="0 0 16 15"
                          fill="none">
                         <rect width="16" height="3" fill="white"/>
@@ -38,6 +41,12 @@ const Navigation = (props: { type?: string }) => {
                     <Image src={logo} alt={'logo'}/>
                 </Link>
             </div>
+            {
+                !props.type &&
+                <div className={`${styles.burger_menu} ${burger ? styles.burger_hide : styles.burger_menu}`}>
+                    {props.children}
+                </div>
+            }
             <ul className={styles.navigation_list}>
                 {
                     navLinks.map((link) => (

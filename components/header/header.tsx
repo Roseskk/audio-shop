@@ -3,12 +3,15 @@ import React from 'react';
 import styles from './header.module.scss';
 import Navigation from "@/components/header/navigation";
 import {usePathname} from "next/navigation";
+import ProductCards from "@/components/productCards/productCards";
 
-const Header = () => {
+const Header = (props: { children: React.ReactNode }) => {
     const pathName = usePathname()
     return (
         <header className={pathName !== '/' ? styles.header_alternative : styles.header}>
-            <Navigation/>
+            <Navigation>
+                {props.children}
+            </Navigation>
             <div className={pathName !== '/' ? styles.header_bg__alternative : styles.header_bg}/>
         </header>
     )

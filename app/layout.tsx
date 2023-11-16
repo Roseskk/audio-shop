@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import '../styles/main.scss'
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import ProductCards from "@/components/productCards/productCards";
 
 
 export const metadata: Metadata = {
@@ -17,7 +18,9 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body>
-        <Header/>
+        <Header>
+            <ProductCards/>
+        </Header>
         {children}
         <Footer/>
         </body>

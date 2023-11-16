@@ -1,4 +1,5 @@
 .navigation {
+  z-index: 10000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +78,34 @@
 
 .col {
   flex-direction: column;
+}
+
+.burger_menu {
+  display: none;
+  position: absolute;
+  top: 98px;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  transform: translateY(-100vw);
+  transition: all 0.5s ease-in-out;
+  background: white;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .burger_menu {
+    display: block;
+    margin-left: -40px;
+  }
+}
+@media (max-width: 767px) {
+  .burger_menu {
+    display: block;
+    margin-left: -24px;
+  }
+}
+
+.burger_hide {
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=navigation.module.css.map */

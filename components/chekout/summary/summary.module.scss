@@ -31,60 +31,6 @@
     color: black;
   }
 
-  .summary_list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    .summary_item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .summary_left {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-
-        .summary_img {
-          background-color: #F1F1F1;
-          padding: 12px;
-
-          border-radius: 8px;
-        }
-
-        .summary_left_content {
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-
-          .left_title {
-            font-weight: 700;
-            font-size: $textBody;
-            color: black;
-          }
-
-          .left_content {
-            font-size: 14px;
-            font-weight: 700;
-
-            color: black;
-            opacity: 0.5;
-          }
-        }
-      }
-
-      .summary_right {
-        font-weight: 700;
-        font-size: $textBody;
-
-        color: black;
-        opacity: 0.5;
-
-        transform: translateY(-10px);
-      }
-    }
-  }
 
   .price_list {
 
@@ -155,4 +101,211 @@
 
 .summary_disabled {
   background-color: #FBAF85;
+}
+
+
+.summary_list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .summary_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .summary_left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .summary_img {
+        background-color: #F1F1F1;
+        padding: 12px;
+
+        border-radius: 8px;
+      }
+
+      .summary_left_content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .left_title {
+          font-weight: 700;
+          font-size: $textBody;
+          color: black;
+        }
+
+        .left_content {
+          font-size: 14px;
+          font-weight: 700;
+
+          color: black;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .summary_right {
+      font-weight: 700;
+      font-size: $textBody;
+
+      color: black;
+      opacity: 0.5;
+
+      transform: translateY(-10px);
+    }
+  }
+
+  .other_items {
+    font-weight: 700;
+    letter-spacing: -0.21px;
+    font-size: 12px;
+    text-align: center;
+
+    color: black;
+    opacity: 0.5;
+  }
+}
+
+
+.summary_cashier {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 70vw;
+
+  padding: 50px;
+
+  background-color: white;
+
+  border-radius: 8px;
+
+  z-index: 10;
+
+  @include respond-to('mobile') {
+    width: 95vw;
+    padding: 25px;
+  }
+
+  .cashier_svg {
+    background-color: $firstColor;
+    padding: 20px;
+
+    border-radius: 50%;
+
+    width: fit-content;
+  }
+
+  .cashier_head {
+    display: flex;
+    flex-direction: column;
+
+    gap: 33px;
+
+    .cashier_title {
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 1.14px;
+      line-height: 36px;
+
+      color: black;
+
+      @include respond-to('mobile') {
+        font-size: 24px;
+      }
+    }
+
+    .cashier_sub {
+      font-weight: 500;
+      font-size: $textBody;
+      line-height: $bodyLine;
+
+      color: black;
+      opacity: 0.5;
+    }
+  }
+
+  .cashier_summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    @include respond-to('mobile') {
+      grid-template-columns: 1fr;
+    }
+
+    .cashier_grand {
+      grid-column: 4/6;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 41px 32px;
+
+      background-color: black;
+
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      @include respond-to('mobile') {
+        grid-column: 1;
+      }
+
+      .cashier_grand_title {
+        color: white;
+        font-weight: 500;
+        font-size: $textBody;
+        line-height: $bodyLine;
+
+        opacity: 0.5;
+      }
+
+      .cashier_grand_price {
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+
+}
+
+.summary_list_gray {
+  grid-column: 1/4;
+  background-color: #F1F1F1 !important;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+
+  @include respond-to('mobile') {
+    grid-column: 1;
+  }
+
+  padding: 20px;
+
+}
+
+
+.cashier_back {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.cashier_back_hide {
+  display: none;
 }

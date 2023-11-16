@@ -2,6 +2,7 @@
 @import "../../styles/abstracts/mixins";
 
 .navigation {
+  z-index: 10000;
 
   display: flex;
   justify-content: space-between;
@@ -100,4 +101,34 @@
 
 .col {
   flex-direction: column;
+}
+
+.burger_menu {
+  display: none;
+  position: absolute;
+  top: 98px;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  transform: translateY(-100vw);
+
+  transition: all 0.5s ease-in-out;
+
+  @include respond-to('laptop') {
+    display: block;
+    margin-left: -40px;
+  }
+
+  @include respond-to('mobile') {
+    display: block;
+    margin-left: -24px;
+  }
+
+
+  background: white;
+}
+
+
+.burger_hide {
+  transform: translateY(0);
 }
