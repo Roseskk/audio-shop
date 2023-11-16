@@ -114,6 +114,11 @@
   font-size: 13px;
   letter-spacing: 1px;
 }
+@media (max-width: 767px) {
+  .summary_btn {
+    padding: 15px 30px;
+  }
+}
 
 .summary_disabled {
   background-color: #FBAF85;

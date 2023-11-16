@@ -1,16 +1,23 @@
 'use client'
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './summary.module.scss';
 import {useFormikContext} from "@/hooks/formikContext";
 import {useAppSelector} from "@/app/store";
 import Image from "next/image";
 import withReduxProvider from "@/app/store/ReduxProvider";
+import {IProductsBasket} from "@/app/store/slices/basket";
 
 const Summary = () => {
     const {form} = useFormikContext();
+    const [initialProducts, setInitialProducts] = useState<IProductsBasket>({})
 
     const products = useAppSelector(state => state.basketReducer.products);
 
+    useEffect(() => {
+        if (products) {
+            setInitialProducts(products)
+        }
+    }, [products])
     const handleForm = () => {
 
         form?.submitForm()
@@ -25,10 +32,10 @@ const Summary = () => {
             })
     };
 
-    const _TOTAL = Object.entries(products).map(([k, v]) => {
+    const _TOTAL = initialProducts ? Object.entries(initialProducts || {}).map(([k, v]) => {
         const priceNumber = parseFloat(v.price.replace(/,/g, ""));
         return priceNumber * v.count;
-    }).reduce((acc, cur) => acc + cur, 0);
+    }).reduce((acc, cur) => acc + cur, 0) : 0
 
     const _VAT = _TOTAL * 0.2
 
@@ -41,9 +48,9 @@ const Summary = () => {
             <h3 className={styles.summary_section__title}>SUMMARY</h3>
             <ul className={styles.summary_list}>
                 {
-                    Object.entries(products).map(([key, value], idx) => {
+                    Object.entries(initialProducts!).map(([key, value], idx) => {
                         return (
-                            <li key={idx} className={styles.summary_item}>
+                            <li key={`${key}${value}-${idx}`} className={styles.summary_item}>
                                 <div className={styles.summary_left}>
                                     <div className={styles.summary_img}>
                                         <Image width={64} height={64} src={value.thumbnail} alt={'thumbnail'}/>
@@ -80,7 +87,7 @@ const Summary = () => {
             <span></span>
             <button className={`${styles.summary_btn} ${!form?.isValid ? styles.summary_disabled : ''}`}
                     disabled={!form?.isValid}
-                    onClick={handleForm}>Submit
+                    onClick={handleForm}>CONTINUE & PAY
             </button>
         </div>
     )

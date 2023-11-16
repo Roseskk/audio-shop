@@ -41,10 +41,21 @@
   grid-template-columns: 1fr 1fr;
   gap: 0 16px;
 }
+@media (max-width: 767px) {
+  .section_billing .billing_grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 .section_billing .billing_phone {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 16px;
+}
+@media (max-width: 767px) {
+  .section_billing .billing_phone {
+    grid-template-columns: 1fr;
+  }
 }
 
 .section_shipping {
@@ -58,10 +69,22 @@
   grid-template-columns: 1fr 1fr;
   gap: 0 16px;
 }
+@media (max-width: 767px) {
+  .section_shipping .zip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 .section_shipping .country {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 16px;
+}
+@media (max-width: 767px) {
+  .section_shipping .country {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .section_payment {
@@ -74,6 +97,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 30px;
+}
+@media (max-width: 767px) {
+  .section_payment .payment_wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 .section_payment .payment_wrapper .payment_title {
   font-size: 12px;
@@ -92,6 +121,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 0 30px;
 }
+@media (max-width: 767px) {
+  .eMoney {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 
 .cash {
   display: flex;
@@ -99,11 +134,22 @@
   gap: 32px;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .cash {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .cash .text {
   font-weight: 500;
   font-size: 15px;
   color: black;
   opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .cash .text {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=information.module.css.map */

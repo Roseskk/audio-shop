@@ -22,7 +22,7 @@
   @include respond-to('mobile') {
     grid-column: 1;
   }
-  
+
   .summary_section__title {
     font-weight: 700;
     font-size: 18px;
@@ -147,6 +147,10 @@
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 1px;
+
+  @include respond-to('mobile') {
+    padding: 15px 30px;
+  }
 }
 
 .summary_disabled {
