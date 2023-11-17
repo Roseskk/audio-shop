@@ -10,6 +10,7 @@ import styles from './navigation.module.scss';
 import {usePathname} from "next/navigation";
 import Basket from "@/components/basket/basket";
 import ProductCards from "@/components/productCards/productCards";
+import BurgerNav from "@/components/header/burgerNav";
 
 type header = Partial<IHeader>
 
@@ -20,7 +21,7 @@ const navLinks: header[] = [
     {id: 4, title: 'EARPHONES', href: '/products/earphones'},
 ]
 
-const Navigation = (props: { type?: string, children?: React.ReactNode }) => {
+const Navigation = (props: { type?: string }) => {
     const [burger, setBurger] = useState<boolean>(false)
     const pathname = usePathname()
     return (
@@ -43,9 +44,10 @@ const Navigation = (props: { type?: string, children?: React.ReactNode }) => {
             </div>
             {
                 !props.type &&
-                <div className={`${styles.burger_menu} ${burger ? styles.burger_hide : styles.burger_menu}`}>
-                    {props.children}
-                </div>
+                <BurgerNav burger={burger} setBurger={setBurger}/>
+                // <div className={`${styles.burger_menu} ${burger ? styles.burger_hide : styles.burger_menu}`}>
+                //
+                // </div>
             }
             <ul className={styles.navigation_list}>
                 {
